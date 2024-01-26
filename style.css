@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00bfff;
+}   
+
+.cameraBody {
+    height: 240px;
+    width: 300px;
+    animation: move 2s linear  infinite alternate-reverse;
+    -webkit-animation: move 2s linear  infinite alternate-reverse;
+}
+
+.cameraBody .topLayer {
+    height: 40px;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    padding: 0px 20px;
+    gap: 50px;
+}
+
+.cameraBody .mainCameraBody {
+    height: calc(100% - 40px);
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    box-shadow: 5px 5px 10px #3F4251E3;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cameraBody .topLayer .shutterButton {
+    height: 10px;
+    width: 40px;
+    background: #f50405;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.cameraBody .topLayer .flashLightBody {
+    height: 30px;
+    width: 100px;
+    background-color: #3c3e52;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cameraBody .topLayer .flashLightBody .flashLight {
+    height: 20px;
+    width: 40px;
+    background-color: #8b8caa;  
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.cameraBody .mainCameraBody .dot {
+    height: 15px;
+    width: 15px;
+    background-color: #3c3e52;
+    position: absolute;
+    top: 35px;
+    left: 35px;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+}
+.cameraBody .mainCameraBody .lenseDiv {
+    z-index: 10;
+}
+
+.cameraBody .mainCameraBody .lenseDiv img {
+    width: auto;
+    height: 150px;
+    animation: rotate 100s linear  infinite;
+    -webkit-animation: rotate 100s linear  infinite;
+}
+
+.cameraBody .mainCameraBody .stripsDiv {
+    height: auto;
+    width: auto;
+    position: absolute;
+    right: 0;
+}
+
+.cameraBody .mainCameraBody .stripsDiv .strip {
+    height: 10px;
+    width: 100px;
+}
+
+.cameraBody .mainCameraBody .stripsDiv .strip1 {
+    background-color: #ff0000;
+}
+.cameraBody .mainCameraBody .stripsDiv .strip2 {
+    background-color: #ffff00;
+}
+.cameraBody .mainCameraBody .stripsDiv .strip3 {
+    background-color: #adff2f;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+} to {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+}
+}
+
+@keyframes move {
+    from {
+        transform: translateY(-3px);
+        -webkit-transform: translateY(-3px);
+        -moz-transform: translateY(-3px);
+        -ms-transform: translateY(-3px);
+        -o-transform: translateY(-3px);
+} to {
+    transform: translateY(3px);
+    -webkit-transform: translateY(3px);
+    -moz-transform: translateY(3px);
+    -ms-transform: translateY(3px);
+    -o-transform: translateY(3px);
+}
+}
+
+.click {
+    animation: click 0.5s linear;
+    -webkit-animation: click 0.5s linear;
+}
+
+@keyframes click {
+    0%,100% {
+        transform: translateY(0px);
+        -webkit-transform: translateY(0px);
+        -moz-transform: translateY(0px);
+        -ms-transform: translateY(0px);
+        -o-transform: translateY(0px);
+} 50% {
+    transform: translateY(10px);
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    -o-transform: translateY(10px);
+}
+}
+
+.glow {
+    background: white;
+    height: 20px;
+    width: 40px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.bodyGlow {
+    height: 30px;
+    width: 100px;
+    background-color: #969696;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
